@@ -1,0 +1,62 @@
+html{
+    font-size: 62,5%;
+    scroll-behavior: smooth;
+       /*Comenta la línea (o dale el valor 'auto' a scroll behavior )
+       para probar la diferencia con y sin scroll suavizado*/
+    
+}
+body {
+    background-color: black;
+}
+
+
+/*  PRESENTACION  */
+
+
+.presentacion {
+    height: 100vh;
+    position: relative;
+}
+.presentacion .row {
+    height: 100%;
+}
+.text-presentacion {
+    
+    width: max-content;
+    height: 50%;
+}
+.presentacion .row .d-flex div h1 {
+    font-size: 3.5rem;
+    color: #1CA800;
+    margin-bottom: 35px;
+    position: relative;
+}
+.presentacion .row .d-flex div h4{
+    padding-left: 10px;
+    color: #1CA800;
+}
+.photo-section div {
+    width: 300px;
+    height: 300px;
+    background-color: #1CA800;
+    border-radius: 50%;
+    margin-top: 20% ;
+    margin-right: 10%;
+}
+
+#presentacion-title {
+    padding-right: 30px;
+}
+.text-presentacion div{
+    position: relative;
+}
+.text-presentacion div div{
+    opacity: 1;
+    width: 15px;
+    height: 2.5rem;
+    animation: parpadeo 1.3s infinite;
+    background-color: #1CA800;
+    position: absolute;
+    right: 0;
+    top: calc(50% - 15px);
+}
