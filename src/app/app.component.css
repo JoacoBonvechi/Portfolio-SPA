@@ -135,3 +135,15 @@ body {
         height: 370px;
     }
 }
+
+
+@keyframes parpadeo{
+    0% {
+        opacity: 1;
+        
+    }
+    50% {
+        opacity: 0;
+        
+    }
+}
