@@ -13,10 +13,12 @@ body {
 
 /*  PRESENTACION  */
 
+.container-fluid{
+    position: relative;
+}
 
 .presentacion {
     height: 100vh;
-    position: relative;
 }
 .presentacion .row {
     height: 100%;
@@ -64,9 +66,8 @@ body {
 
 .nav-bar {
     position: absolute;
-    top: calc(50% - 390px);
-    left: 90%;
-
+    right: 0;
+    top: 0;
 }
 
 @media (max-width:990px){
