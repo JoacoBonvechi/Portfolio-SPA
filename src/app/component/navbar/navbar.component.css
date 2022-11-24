@@ -1,21 +1,9 @@
-.img-nav{
-    height: 70px;
+.sidebar{
+    height: 100vh;
+    width: 100px;
+    background-color: #1e1e1e;
 }
-a{
-    display: flex;
-    justify-content: center;    
-    transition: all ease 500ms;
-}
-li {
-    list-style: none;
-    margin: 100px 0;
-    display: flex;
-    flex-direction: column;
-}
-ul{
-    margin: 0;
-}
-a:hover{
-    transform: translateX(-30px);
-    transition: all ease 500ms;
+
+.sidebar .image-text img{
+    width: 40px;
 }
