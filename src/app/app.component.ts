@@ -1,4 +1,5 @@
-import { Component, OnInit} from '@angular/core';
+import { NgIf } from '@angular/common';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,27 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  @ViewChild('asSide',{static : false}) sidebar : any;
+
+  validacion = false
+
+  constructor(private renderer2: Renderer2){
+
+  }
+
+  public change() {
+    if (this.validacion === true){
+      this.validacion = false
+    }
+    else{
+      this.validacion = true
+    }
+
+
+    console.log(this.validacion)
+  }
+
   title = 'portfolio';
 
   texto = ""
@@ -68,5 +90,7 @@ export class AppComponent {
     this.escritura()
   }
 
-  
+
+
+
 }

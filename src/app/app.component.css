@@ -8,6 +8,7 @@ html{
 body {
     background-color: black;
     position: relative;
+    overflow-x: hidden;
 }
 
 
@@ -147,4 +148,84 @@ body {
         opacity: 0;
         
     }
+}
+
+
+
+.sidebar {
+    height: 100vh;
+    width: 150px;
+    background-color: #1e1e1e;
+    position: absolute;
+    right: -150px;
+    transition: all 500ms;
+    -webkit-box-shadow: -10px 2px 35px 0px rgba(32, 32, 32, 0.75);
+    -moz-box-shadow: -10px 2px 35px 0px rgba(32, 32, 32, 0.75);
+    box-shadow: -10px 2px 35px 0px rgba(32, 32, 32, 0.75);
+}
+
+.toggle-btn{
+    position: absolute;
+    right: 230px;
+    top: 40px;
+}
+
+.active {
+    right: 0;
+    transition: all 500ms;
+}
+
+.toggle-btn i {
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.container-options{
+    margin-bottom: 50px;
+}
+
+.container-options span img{
+    width: 120px;
+}
+
+
+ul.list-buttons  {
+    margin: 0;
+    padding: 0;
+}
+
+.list-buttons li {
+    list-style: none;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.list-buttons li a {
+    padding: 20px 35px;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    transition: all 500ms ease;
+}
+
+.list-buttons li a i {
+    font-size: 30px;
+    color: white;
+    transition: all 500ms ease;
+}
+
+.list-buttons img {
+    width: 100px;
+}
+
+.list-buttons li a:hover{
+    background-color: #ABABAB;
+    transition: all 500ms ease;
+}
+
+.list-buttons li a:hover i{
+    color: #1e1e1e;
+    transition: all 500ms ease;
+    
 }

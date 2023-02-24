@@ -1,5 +1,47 @@
 <body>
 <section class="container-fluid">
+    
+<nav [ngClass]="{'active': validacion === true}" #asSide class="sidebar" id="sidebar">
+
+    <div class="toggle-btn" (click)="change()">
+        <i class='bx bx-menu'></i>
+    </div>
+
+    <header class="container-options d-flex justify-content-center flex-wrap">
+        <span>
+            <img src="../../../assets/logo luna sombra y recorte.png" alt="">
+        </span>
+    </header>
+
+    <ul class="list-buttons">
+        <li>
+            <a href="#languages-section">
+                <i class='bx bxs-wrench'></i>
+            </a>
+        </li>
+
+        <li>
+            <a href="#contact-section">
+                <i class='bx bx-message bx-flip-horizontal' ></i>
+            </a>
+        </li>
+
+        <li>
+            <a href="#work-section">
+                <i class='bx bxs-briefcase'></i>
+            </a>
+        </li>
+
+        <li>
+            <a href="#about-section">
+                <i class='bx bx-user'></i>
+            </a>
+        </li>
+
+    </ul>
+    
+</nav>
+
     <section class="container presentacion">
         <div class="row">
             <div class="d-flex align-items-center flex-wrap col-sm-12 col-md-7 text-presentacion-container">
@@ -18,8 +60,6 @@
         </div>
     
     </section>
-
-    <app-navbar class="nav-bar"> </app-navbar>
 
 </section>
 
