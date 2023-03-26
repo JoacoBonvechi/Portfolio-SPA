@@ -9,6 +9,11 @@ import { AboutComponent } from './component/about/about.component';
 import { WorkComponent } from './component/work/work.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { IniciarSesionComponent } from './component/iniciar-sesion/iniciar-sesion.component';
+import { PresentacionComponent } from './component/presentacion/presentacion.component';
+import { PortfolioComponent } from './component/portfolio/portfolio.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +23,17 @@ import { FooterComponent } from './component/footer/footer.component';
     AboutComponent,
     WorkComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    IniciarSesionComponent,
+    PresentacionComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

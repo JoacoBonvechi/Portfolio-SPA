@@ -1,0 +1,41 @@
+<nav [ngClass]="{'active': validacion === true}" #asSide class="sidebar" id="sidebar">
+
+    <div class="toggle-btn" (click)="change()">
+        <i class='bx bx-menu'></i>
+    </div>
+
+    <header class="container-options d-flex justify-content-center flex-wrap">
+        <span>
+            <img src="../../../assets/logo luna sombra y recorte.png" alt="">
+        </span>
+    </header>
+
+    <ul class="list-buttons">
+        
+        <li>
+            <a href="#language-section">
+                <i class='bx bxs-wrench'></i>
+            </a>
+        </li>
+
+        <li>
+            <a href="#contact-section">
+                <i class='bx bx-message bx-flip-horizontal' ></i>
+            </a>
+        </li>
+
+        <li>
+            <a href="#work-section">
+                <i class='bx bxs-briefcase'></i>
+            </a>
+        </li>
+
+        <li>
+            <a href="#about-me-section">
+                <i class='bx bx-user'></i>
+            </a>
+        </li>
+
+    </ul>
+    
+</nav>
