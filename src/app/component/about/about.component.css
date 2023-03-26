@@ -1,0 +1,53 @@
+/*ABOUT ME */
+
+.about-me {
+    background-color: white;
+    padding: 60px 0px;
+    text-align: center;
+}
+
+.about-me h2 {
+    color: #333333;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.about-me-content {
+    padding: 80px 0px;
+}
+.about-me-content .row{
+    margin: 0;
+}
+
+.me-card , .studyes-card {
+    background-color: #1E1E1E;
+    border-radius: 7px;
+    padding: 20px 20px;
+    text-align: center;
+    color: white;
+    padding-bottom: 30px;
+}
+.me-card {
+    padding: 20px 80px;
+    margin: auto;
+}
+.me-card p {
+    margin: 0;
+    padding-bottom: 30px;
+}
+.studyes-card {
+    padding: 20px 60px 30px 60px;
+}
+.me-card h3 , .studyes-card h3{
+    font-weight: 400;
+    padding: 20px;
+    margin: 0;
+}
+.bar-yoprogramo {
+    background-color: #9747FF;
+}
+.bar-tecnicatura {
+    background-color: #0d99ff;
+}
+.progress {
+    margin-bottom: 35px;
+}

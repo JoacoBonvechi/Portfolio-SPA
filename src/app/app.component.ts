@@ -1,4 +1,5 @@
-import { Component, OnInit} from '@angular/core';
+import { NgIf } from '@angular/common';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,13 +7,5 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'portfolio';
 
-  texto :string= ""
-  maquina2 = document.getElementById('presentacion-text')
-  maquina3 = document.getElementById('presentacion-text2')
-
- 
-  
 }
-
