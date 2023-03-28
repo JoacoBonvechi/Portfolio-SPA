@@ -4,7 +4,7 @@
 <section class="container contact-content">
     <div id="container-form">
         <h3>Form of Contact</h3>
-        <form action="https://formsubmit.co/joacobonvechi2272002@gmail.com" method="POST" class="row g-3 d-flex flex-wrap justify-content-center">
+        <form #myForm (submit)="onSubmit()" action="https://formsubmit.co/joacobonvechi2272002@gmail.com" method="POST" class="row g-3 d-flex flex-wrap justify-content-center" name="_captcha" value="false">
             <div class="col-md-6">
               <label for="name" class="form-label">Name</label>
               <input name="nombre" type="name" class="form-control" id="name">
