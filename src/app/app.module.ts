@@ -9,11 +9,11 @@ import { AboutComponent } from './component/about/about.component';
 import { WorkComponent } from './component/work/work.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { FooterComponent } from './component/footer/footer.component';
-import { IniciarSesionComponent } from './component/iniciar-sesion/iniciar-sesion.component';
 import { PresentacionComponent } from './component/presentacion/presentacion.component';
 import { PortfolioComponent } from './component/portfolio/portfolio.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './component/login/login.component';
 
 @NgModule({
   declarations: [
@@ -24,9 +24,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     WorkComponent,
     ContactComponent,
     FooterComponent,
-    IniciarSesionComponent,
+    LoginComponent,
     PresentacionComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

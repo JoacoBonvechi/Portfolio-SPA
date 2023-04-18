@@ -76,3 +76,35 @@ ul.list-buttons  {
     transition: all 500ms ease;
     
 }
+
+.switchButton {
+    color: white;
+    border: none; 
+    font-weight: 500;
+    font-size: medium;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    transition: all 500ms ease;
+}
+.switchButton:hover{
+    background-color: #ABABAB;
+    color: #1e1e1e;
+    transition: all 500ms ease;
+}
+
+
+@media (max-width:770px){ 
+    .toggle-btn{
+        position: absolute;
+        right: 180px;
+        top: 30px;
+        opacity: 0.5;
+    }
+}
+
+
+.form-login{
+    position: sticky;
+    left: -50%;
+}

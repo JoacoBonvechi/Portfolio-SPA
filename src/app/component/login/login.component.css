@@ -1,0 +1,33 @@
+section {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 70%;
+    z-index: 2;
+}
+.closeModal {
+    position: absolute;
+    top: 2%;
+    right: 3.5%;
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+    border: none;
+    background: transparent;
+
+}
+.switchButton {
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    background: transparent;
+    color: #1CA800;
+    border: none;
+    font-size: 20px;
+}
+@media (max-width:770px){
+    section{
+        width: 85%;
+        left: 8%;
+    }
+}

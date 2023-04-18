@@ -11,7 +11,11 @@
     </header>
 
     <ul class="list-buttons">
-        
+        <li>
+            <button class="switchButton" (click)="this.modalService.openModal()" *ngIf="!isLogged">Ingresa</button>
+            <button class="switchButton" (click)="onLogOut()" *ngIf="isLogged">Salir</button>
+        </li>
+
         <li>
             <a href="#language-section">
                 <i class='bx bxs-wrench'></i>
