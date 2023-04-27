@@ -34,13 +34,13 @@
               {{ Estudio.porcentaje }}
             </div>
           </div>
-          <div >
+          <div *ngIf="isLogged">
             <button class="btn btn-light" routerLink="editEstudio/{{Estudio.id}}">
               <i class="bi bi-pencil-fill">EDITAR</i>
             </button>
           </div>
 
-          <div >
+          <div *ngIf="isLogged">
             <button class="btn btn-danger" (click)="borrar(Estudio.id)">
                 <i class="bi bi-trash-fill"></i>BORRAR
             </button>
@@ -88,7 +88,7 @@
         href="https://seprogramar.inti.gob.ar/inti/certificates/verify/a98Koua17K1Fc8tP"
         >#YoProgramo</a
       >
-      <div>
+      <div *ngIf="isLogged">
         <button type="button" class="btn btn-dark" routerLink="/nuevoEstudio">AGREGAR</button>
       </div>
     </article>

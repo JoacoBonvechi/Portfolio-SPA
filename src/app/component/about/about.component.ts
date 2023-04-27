@@ -12,17 +12,17 @@ export class AboutComponent implements OnInit{
   estudio: Estudio[] = []
 
   constructor(private estudioS: EstudioService, private tokenService:TokenService){
-    // isLogged = false;
   }
+  isLogged = false;
 
   ngOnInit():void {
-    // this.cargarEducacion();
-    // if(this.tokenService.getToken()){
-    //   this.isLogged = true;
-    // }
-    // else {
-    //   this.isLogged = false
-    // }
+    this.cargarEducacion();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    }
+    else {
+      this.isLogged = false
+    }
   }
 
   cargarEducacion():void {
