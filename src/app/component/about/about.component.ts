@@ -14,7 +14,7 @@ export class AboutComponent implements OnInit{
   constructor(private estudioS: EstudioService, private tokenService:TokenService){
   }
 
-  isLogged = false;
+  isLogged:boolean = false;
 
   ngOnInit():void {
     this.cargarEducacion();
@@ -37,6 +37,7 @@ export class AboutComponent implements OnInit{
     if(id != undefined){
       this.estudioS.delete(id).subscribe(
         data => {
+          alert("Estudio eliminado correctamente")
           this.cargarEducacion();
         }, err => {
           alert("No se pudo eliminar");

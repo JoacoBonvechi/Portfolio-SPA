@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Estudio } from 'src/app/model/estudio';
 import { EstudioService } from 'src/app/service/estudio.service';
@@ -9,26 +10,49 @@ import { EstudioService } from 'src/app/service/estudio.service';
   styleUrls: ['./newestudio.component.css']
 })
 export class NewestudioComponent implements OnInit{
-  estudio!: string;
-  porcentaje!: string;
-
-  constructor(private estudioS: EstudioService,private router:Router){
+  form:FormGroup;
+  constructor(private formBuilder: FormBuilder, private sEstudio: EstudioService) { 
+    //Creamos el grupo de controles para el formulario 
+    this.form=this.formBuilder.group({
+      estudio:['',[Validators.required]],
+      porcentaje:[''],
+      personaid:[1]
+   })
   }
 
   ngOnInit(): void {
-    
   }
 
-  onCreate():void{
-    const estudio = new Estudio(this.estudio ,this.porcentaje);
-    this.estudioS.save(estudio).subscribe(
-      data =>{
-        alert("Estudios añadido correctamente");
-        this.router.navigate([''])
-      }, err =>{
-        alert("fallo");
-        this.router.navigate([''])
-      }
-    )
+  get Estudio(){
+    return this.form.get("estudio");
   }
+
+  get Porcentaje(){
+    return this.form.get("porcentaje");
+  }
+ 
+  
+
+  onCreate(): void{
+      this.sEstudio.save(this.form.value).subscribe(data=>{
+      alert("Estudio Añadido");
+      window.location.reload();
+    });
+  }
+
+  limpiar(): void{
+    this.form.reset();
+  }
+
+  onEnviar(event:Event){
+    event.preventDefault;
+    if (this.form.valid){
+      //metodos
+      this.onCreate();
+    }else{
+      alert("falló en la carga, intente nuevamente");
+      this.form.markAllAsTouched();
+    }
+  }
+
 }

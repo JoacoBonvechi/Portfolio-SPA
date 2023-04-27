@@ -16,6 +16,10 @@ export class EstudioService {
     return this.httpClient.get<Estudio[]>(this.URL + "lista");
   }
 
+  public listaPer(id: number): Observable<Estudio[]>{
+    return this.httpClient.get<Estudio[]>(this.URL + `persona/${id}/lista`);
+  }
+
   public detail(id:number):Observable<Estudio>{
     return this.httpClient.get<Estudio>(this.URL + `detail/${id}`)
   }
