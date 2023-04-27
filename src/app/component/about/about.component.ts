@@ -13,14 +13,14 @@ export class AboutComponent implements OnInit{
 
   constructor(private estudioS: EstudioService, private tokenService:TokenService){
   }
+
   isLogged = false;
 
   ngOnInit():void {
     this.cargarEducacion();
     if(this.tokenService.getToken()){
       this.isLogged = true;
-    }
-    else {
+    } else {
       this.isLogged = false
     }
   }
