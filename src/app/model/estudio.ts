@@ -1,5 +1,5 @@
 export class Estudio {
-  id?: number;
+  id!: number;
   estudio: string;
   porcentaje:string;
   personaid: number;

@@ -13,11 +13,7 @@ export class EstudioService {
   constructor(private httpClient : HttpClient) { }
 
   public lista():Observable<Estudio[]>{
-    return this.httpClient.get<Estudio[]>(this.URL + "lista");
-  }
-
-  public listaPer(id: number): Observable<Estudio[]>{
-    return this.httpClient.get<Estudio[]>(this.URL + `persona/${id}/lista`);
+    return this.httpClient.get<Estudio[]>(this.URL + `lista`);
   }
 
   public detail(id:number):Observable<Estudio>{
@@ -25,7 +21,7 @@ export class EstudioService {
   }
 
   public save(estudio : Estudio): Observable<any>{
-    return this.httpClient.post<any>(this.URL + 'create', estudio);
+    return this.httpClient.post<any>(this.URL + `create`, estudio);
   }
 
   public update(id:number, estudio:Estudio): Observable<any>{

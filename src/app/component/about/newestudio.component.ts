@@ -14,7 +14,7 @@ export class NewestudioComponent implements OnInit{
   constructor(private formBuilder: FormBuilder, private sEstudio: EstudioService) { 
     //Creamos el grupo de controles para el formulario 
     this.form=this.formBuilder.group({
-      estudio:['',[Validators.required]],
+      estudio:[''],
       porcentaje:[''],
       personaid:[1]
    })
