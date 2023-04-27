@@ -14,6 +14,8 @@ import { PortfolioComponent } from './component/portfolio/portfolio.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './component/login/login.component';
+import { NewestudioComponent } from './component/about/newestudio.component';
+import { EditestudioComponent } from './component/about/editestudio.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { LoginComponent } from './component/login/login.component';
     LoginComponent,
     PresentacionComponent,
     PortfolioComponent,
-    LoginComponent
+    LoginComponent,
+    NewestudioComponent,
+    EditestudioComponent
   ],
   imports: [
     BrowserModule,
