@@ -11,7 +11,7 @@ import { EstudioService } from 'src/app/service/estudio.service';
 })
 export class NewestudioComponent implements OnInit{
   form:FormGroup;
-  constructor(private formBuilder: FormBuilder, private sEstudio: EstudioService) { 
+  constructor(private formBuilder: FormBuilder, private sEstudio: EstudioService, private router:Router) { 
     //Creamos el grupo de controles para el formulario 
     this.form=this.formBuilder.group({
       estudio:[''],
@@ -30,29 +30,21 @@ export class NewestudioComponent implements OnInit{
   get Porcentaje(){
     return this.form.get("porcentaje");
   }
- 
   
 
   onCreate(): void{
-      this.sEstudio.save(this.form.value).subscribe(data=>{
-      alert("Estudio Añadido");
-      window.location.reload();
-    });
-  }
-
-  limpiar(): void{
-    this.form.reset();
-  }
-
-  onEnviar(event:Event){
-    event.preventDefault;
-    if (this.form.valid){
-      //metodos
-      this.onCreate();
-    }else{
-      alert("falló en la carga, intente nuevamente");
-      this.form.markAllAsTouched();
-    }
+    console.log(this.Estudio?.value,this.Porcentaje?.value)
+    const estudio = new Estudio(this.Estudio?.value, this.Porcentaje?.value);
+    this.sEstudio.save(estudio).subscribe(
+      data =>{
+        alert("Educacion añadida correctamente");
+        this.router.navigate(['']);
+      }, err =>{
+        alert("falló");
+        this.router.navigate(['']);
+      }
+    )
   }
 
 }
+

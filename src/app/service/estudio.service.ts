@@ -8,28 +8,30 @@ import { Estudio } from '../model/estudio';
 })
 export class EstudioService {
 
-  URL = "https://portfolio-joaquin-b6373.web.app/estudios/";
+  url = "https://portfolio-backend-production-ca21.up.railway.app/estudios/";
 
-  constructor(private httpClient : HttpClient) { }
-
-  public lista():Observable<Estudio[]>{
-    return this.httpClient.get<Estudio[]>(this.URL + `lista`);
+  constructor(private httpClient:HttpClient) { }
+  public lista(): Observable<Estudio[]>{
+    console.log(this.url + 'lista')
+    return this.httpClient.get<Estudio[]>(this.url + 'lista');
   }
 
-  public detail(id:number):Observable<Estudio>{
-    return this.httpClient.get<Estudio>(this.URL + `detail/${id}`)
+  public detail(id: number): Observable<Estudio>{
+    return this.httpClient.get<Estudio>(this.url + `detail/${id}`);
   }
 
-  public save(estudio : Estudio): Observable<any>{
-    return this.httpClient.post<any>(this.URL + `create`, estudio);
+  public save(educacion: Estudio): Observable<any>{
+    return this.httpClient.post<any>(this.url + 'create', educacion);
   }
 
-  public update(id:number, estudio:Estudio): Observable<any>{
-    return this.httpClient.put<any>(this.URL + `update/${id}`, estudio)
+  public update(id: number, educacion: Estudio): Observable<any>{
+    return this.httpClient.put<any>(this.url + `update/${id}`, educacion);
   }
 
-  public delete (id:number): Observable<any> {
-    return this.httpClient.delete<any>(this.URL + `delete/${id}`);
+  public delete(id: number): Observable<any>{
+    return this.httpClient.delete<any>(this.url + `delete/${id}`);
   }
+
+
 }
 

@@ -9,23 +9,21 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit{
-  estudio: Estudio[] = []
+  estudio: Estudio[] = [];
 
-  constructor(private estudioS: EstudioService, private tokenService:TokenService){
-  }
+  constructor(private estudioS: EstudioService, private tokenService: TokenService) { }
+  isLogged = false;
 
-  isLogged:boolean = false;
-
-  ngOnInit():void {
+  ngOnInit(): void {
     this.cargarEducacion();
     if(this.tokenService.getToken()){
       this.isLogged = true;
     } else {
-      this.isLogged = false
+      this.isLogged = false;
     }
   }
 
-  cargarEducacion():void {
+  cargarEducacion(): void{
     this.estudioS.lista().subscribe(
       data =>{
         this.estudio = data;
@@ -33,11 +31,10 @@ export class AboutComponent implements OnInit{
     )
   }
 
-  borrar(id?:number){
-    if(id != undefined){
+  delete(id?: number){
+    if( id != undefined){
       this.estudioS.delete(id).subscribe(
         data => {
-          alert("Estudio eliminado correctamente")
           this.cargarEducacion();
         }, err => {
           alert("No se pudo eliminar");

@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div>
-            <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="educacionForm">
+            <form [formGroup]="form" (ngSubmit)="onCreate()" name="educacionForm">
                 <div class="form-group">
                     <label for="educacionEstudio" class="form-label">Agregar Estudio</label>
                   <input type="text" class="form-control"   formControlName="estudio" placeholder="Nombre nuevo">
@@ -11,7 +11,6 @@
                     <label for="porcentaje">Porcentaje</label>
                     <input type="text" class="form-control" id="porcentaje" name="porcentaje" formControlName="porcentaje" required>
                 </div>
-                <button type="button" class="btn btn-dark" (click)="limpiar()">Limpiar</button>
                 <button type="submit" class="btn btnLogin btn-dark">Agregar</button>
             </form>
         </div>

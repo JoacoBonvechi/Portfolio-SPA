@@ -30,7 +30,7 @@ export class EditestudioComponent implements OnInit{
 
   onUpdate():void{
     const id = this.activatedRouter.snapshot.params['id'];
-  this.estudioS.update(id, this.estudio).subscribe(
+  this.estudioS.update(id,this.estudio).subscribe(
     data =>{
       this.router.navigate(['']);
     }, err => {

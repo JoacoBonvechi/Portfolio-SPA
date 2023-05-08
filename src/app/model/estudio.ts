@@ -1,12 +1,11 @@
 export class Estudio {
-  id!: number;
+  id?: number;
   estudio: string;
   porcentaje:string;
-  personaid: number;
+  personaid?: number;
 
-  constructor(estudio: string, porcentaje: string, personaid:number) {
+  constructor(estudio: string, porcentaje: string) {
     this.estudio = estudio;
     this.porcentaje = porcentaje;
-    this.personaid = personaid
   }
 }

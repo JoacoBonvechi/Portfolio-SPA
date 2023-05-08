@@ -10,7 +10,7 @@ const routes: Routes = [
   {path:'iniciar-sesion',component:LoginComponent},
   {path:'',redirectTo:'portfolio',pathMatch:'full'},
   {path:'nuevoEstudio', component:NewestudioComponent},
-  {path:'editEstudio', component:EditestudioComponent}
+  {path:'editEstudio/:id', component:EditestudioComponent}
 ];
 
 @NgModule({
