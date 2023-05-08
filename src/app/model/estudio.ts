@@ -3,9 +3,11 @@ export class Estudio {
   estudio: string;
   porcentaje:string;
   personaid?: number;
+  color?: string;
 
-  constructor(estudio: string, porcentaje: string) {
+  constructor(estudio: string, porcentaje: string, color:string) {
     this.estudio = estudio;
     this.porcentaje = porcentaje;
+    this.color = color;
   }
 }

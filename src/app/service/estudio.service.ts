@@ -12,7 +12,6 @@ export class EstudioService {
 
   constructor(private httpClient:HttpClient) { }
   public lista(): Observable<Estudio[]>{
-    console.log(this.url + 'lista')
     return this.httpClient.get<Estudio[]>(this.url + 'lista');
   }
 

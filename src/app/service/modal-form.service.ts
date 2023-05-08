@@ -21,7 +21,6 @@ export class ModalFormService {
    else{
     this.modalSwitch = false
   }
-   return console.log("componente iniciar session funcion")
 }
 
 

@@ -16,6 +16,7 @@ export class NewestudioComponent implements OnInit{
     this.form=this.formBuilder.group({
       estudio:[''],
       porcentaje:[''],
+      color:[''],
       personaid:[1]
    })
   }
@@ -30,11 +31,13 @@ export class NewestudioComponent implements OnInit{
   get Porcentaje(){
     return this.form.get("porcentaje");
   }
+  get Color(){
+    return this.form.get("color")
+  }
   
 
   onCreate(): void{
-    console.log(this.Estudio?.value,this.Porcentaje?.value)
-    const estudio = new Estudio(this.Estudio?.value, this.Porcentaje?.value);
+    const estudio = new Estudio(this.Estudio?.value, this.Porcentaje?.value, this.Color?.value);
     this.sEstudio.save(estudio).subscribe(
       data =>{
         alert("Educacion añadida correctamente");

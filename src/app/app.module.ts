@@ -15,7 +15,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './component/login/login.component';
 import { NewestudioComponent } from './component/about/newestudio.component';
-import { EditestudioComponent } from './component/about/editestudio.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +30,6 @@ import { EditestudioComponent } from './component/about/editestudio.component';
     PortfolioComponent,
     LoginComponent,
     NewestudioComponent,
-    EditestudioComponent
   ],
   imports: [
     BrowserModule,
