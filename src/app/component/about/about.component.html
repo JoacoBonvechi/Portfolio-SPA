@@ -7,11 +7,11 @@
   <div class="row d-flex flex-wrap justify-content-evenly">
     <article class="me-card col-sm-7 col-md-5">
       <h3>Me.</h3>
-      <p *ngFor="let Persona of persona">
-        {{Persona.sobreMi}}
+      <p>
+        {{persona.sobreMi}}
       </p>
       <div *ngIf="isLogged">
-        <button type="button" class="btn btn-dark" routerLink="/editarSobreMi">MODIFICAR</button>
+        <button type="button" class="btn btn-dark" routerLink="/editarSobreMi{{persona?.id}}">MODIFICAR</button>
       </div>
     </article>
 

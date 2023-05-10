@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { PersonaService } from 'src/app/service/persona.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -12,50 +12,43 @@ import { Persona } from 'src/app/model/persona';
 export class EditarSobreMiComponent implements OnInit{
   form:FormGroup;
 
-  persona :Persona[] = [];
+  persona :Persona = null;
 
-
-  constructor(private activatedRouter:ActivatedRoute, private formBuilder: FormBuilder, private sPersona: PersonaService, private router:Router){
+  constructor(private cd:ChangeDetectorRef,private activatedRouter:ActivatedRoute, private formBuilder: FormBuilder, private sPersona: PersonaService, private router:Router){
     this.form=this.formBuilder.group({
       id:[1],
-      nombre:[],
-      apellido:[],
-      titulo:[],
-      sobreMi:[]
+      nombre:["joaquin"],
+      apellido:["bonvechi"],
+      titulo:["nose"],
+      sobreMi:[""]
     })
   }
 
-  get SobreMi(){
-    return this.form.get("sobreMi")
-  }
+  // get SobreMi(){
+  //   return this.form.get("sobreMi");
+  // }
 
-  sobreMi:any = this.SobreMi
 
   ngOnInit(): void {
+    this.cd.detectChanges();
     const id = this.activatedRouter.snapshot.params['id'];
-    this.sPersona.detail(id).subscribe(
-      data =>{
-        this.sobreMi = data;
-      }, err =>{
-        alert("Error al modificar")
-        this.router.navigate([''])
-      }
+    this.sPersona.detail(id).subscribe(data => {
+      this.persona=data;
+      this.cd.detectChanges();
+    },err =>{
+      alert("Error al cargar datos en editar sobre mi");
+      this.router.navigate(['']);
+    }
     )
   }
 
- 
-
-  
-  
 
   onModificar(): void{
-    const id = this.activatedRouter.snapshot.params['id'];
-    this.sPersona.update(id).subscribe(
-      data => {
-        this.router.navigate([""]);
-      }, err =>{
-        alert("Error al modificar")
-      }
+    this.cd.detectChanges();
+    this.sPersona.update(this.form.value).subscribe(data => {
+      alert("Persona modificada.");
+      this.router.navigate(['']);
+    }
     )
   }
 }

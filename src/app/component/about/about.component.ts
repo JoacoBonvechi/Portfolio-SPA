@@ -11,6 +11,7 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit{
+  
   estudio: Estudio[] = [];
 
   constructor(private estudioS: EstudioService, private tokenService: TokenService, private personaS : PersonaService) { }
@@ -26,7 +27,7 @@ export class AboutComponent implements OnInit{
     }
   }
 
-  persona :Persona[] = [];
+  persona :Persona;
 
   cargarEducacion(): void{
     this.estudioS.lista().subscribe(
@@ -49,11 +50,8 @@ export class AboutComponent implements OnInit{
   }
 
   cargarSobreMi(): void{
-    this.personaS.lista().subscribe(
-      data =>{
-        this.persona = data;
-      }
-    )
+    this.personaS.detail(1).subscribe(data => 
+      {this.persona=data});
   } 
 
 
