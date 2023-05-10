@@ -7,13 +7,12 @@
   <div class="row d-flex flex-wrap justify-content-evenly">
     <article class="me-card col-sm-7 col-md-5">
       <h3>Me.</h3>
-      <p>
-        Hello, I'm Joaquin Bonvechi, I'm 20 years old, a student and full stack
-        developer of Web Development and Mobile Development with experience and
-        preference in the front end development of web pages, with the best
-        practices and latest technologies. Although I have preferences, I find
-        myself looking for work in any area.
+      <p *ngFor="let Persona of persona">
+        {{Persona.sobreMi}}
       </p>
+      <div *ngIf="isLogged">
+        <button type="button" class="btn btn-dark" routerLink="/editarSobreMi">MODIFICAR</button>
+      </div>
     </article>
 
     <article class="studyes-card col-sm-7 col-md-5">

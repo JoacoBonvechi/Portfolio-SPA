@@ -8,7 +8,7 @@ import { Persona } from '../model/persona';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL = 'https://portfolio-backend-production-ca21.up.railway.app/persona'
+  URL = 'https://portfolio-backend-production-ca21.up.railway.app/persona/'
 
   constructor(private httpClient: HttpClient) { }
 
@@ -29,7 +29,7 @@ export class PersonaService {
     return this.httpClient.delete<any>(this.URL + `delete/${id}`);
     }
 
-  public edit(perso: Persona):Observable<any>{
-    return this.httpClient.put<any>(this.URL + 'update', perso);
+  public update(id: number):Observable<any>{
+    return this.httpClient.put<any>(this.URL + `update/`, id);
     }
 }

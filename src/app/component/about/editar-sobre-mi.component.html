@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <form [formGroup]="form" (ngSubmit)="onModificar()" name="sobreMiForm">
+
+                <div class="form-group">
+                    <label for="sobreMI" class="form-label">Modificar Sobre Mi</label>
+                  <textarea type="text" class="form-control"   formControlName="sobreMi" placeholder="Hola soy...">{{persona}}</textarea>
+                </div>
+                <button type="submit" class="btn btnLogin btn-dark">Modificar</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+

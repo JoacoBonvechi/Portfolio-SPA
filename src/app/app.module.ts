@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './component/login/login.component';
 import { NewestudioComponent } from './component/about/newestudio.component';
+import { EditarSobreMiComponent } from './component/about/editar-sobre-mi.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { NewestudioComponent } from './component/about/newestudio.component';
     PortfolioComponent,
     LoginComponent,
     NewestudioComponent,
+    EditarSobreMiComponent
   ],
   imports: [
     BrowserModule,

@@ -11,8 +11,7 @@ import { EstudioService } from 'src/app/service/estudio.service';
 })
 export class NewestudioComponent implements OnInit{
   form:FormGroup;
-  constructor(private formBuilder: FormBuilder, private sEstudio: EstudioService, private router:Router) { 
-    //Creamos el grupo de controles para el formulario 
+  constructor(private formBuilder: FormBuilder, private sEstudio: EstudioService, private router:Router) {  
     this.form=this.formBuilder.group({
       estudio:[''],
       porcentaje:[''],
@@ -20,7 +19,7 @@ export class NewestudioComponent implements OnInit{
       personaid:[1]
    })
   }
-
+  
   ngOnInit(): void {
   }
 
